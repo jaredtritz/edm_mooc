@@ -1,0 +1,76 @@
+
+            detector yes    detector no
+data yes    16              7
+data no     8               19
+
+
+50 total
+35 agreements 
+
+(Pa - Pe) / (1 - Pe)
+
+Pa = 35 / 50 = 0.7
+
+Pe  = Pe(both yes) + Pe(both no)
+...first individual frequencies
+detector yes    (16 + 8) / 50   = 23/50     = 0.48
+detector no     (7 + 19) / 50   = 1 - yes   = 0.52 
+data yes        (16 + 7) / 50   = 24/50     = 0.46 
+data no         (8 + 19) / 50   = 26/50     = 0.54
+...next agreement frequencies
+Pe(both yes)    = 0.48 * 0.46 = 0.22
+Pe(both no)     = 0.52 * 0.54 = 0.28
+Pe = 0.22 + 0.28 = 0.5
+
+kappa = (0.7 - 0.5) / (1 - 0.5) = 0.4
+
+second quiz
+
+1 2
+4 141
+
+Pa = 142 / 150 = 0.947
+...freqencies
+detector yes    5/150   = 0.03
+detector no     143/150 = 0.953
+data yes        3/150   = 0.02
+data no         146/150 = 0.973
+...agreements
+Pe(both yes)    = 0.03 * 0.02   = .0006
+Pe(both no)     = 0.953 * 0.973 = 0.912
+Pe = 0.0006 + 0.912 = 0.913
+
+kappa = (0.947 - 0.913) / (1 - 0.913) =  0.034 / 0.087  
+
+----------------------------------------------------
+
+            ROC curves
+    |                   *
+ t  |
+ r  |        *
+ u  |
+ e  |    *
+    |
+ p  |  *
+ o  |  
+ s  | *
+   0|_________________________
+    0   false positive      1
+
+
+Precision   = Tp / (Tp + Fp)
+Recall      = Tp / (Tp + Fn) 
+
+----------------------------------------------------
+
+MAD = Mean Absolute Deviation error
+RMS = Root Mean Square error...averages the squares first, then takes root, thus penalizes large deviations
+
+-------------------------------------------------
+
+Bayesian Inference Criterion
+
+------------------------------------------------
+
+What I'm calling Resampling is called "Stratified Cross Validation" 
+Student level cross validation: no student is in more than one fold -- ensures the model will work on new students
