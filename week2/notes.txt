@@ -68,7 +68,7 @@ RMS = Root Mean Square error...averages the squares first, then takes root, thus
 
 -------------------------------------------------
 
-Bayesian Inference Criterion
+Bayesian Inference Criterion -- this is a way of deciding if your model is overfit
 
 ------------------------------------------------
 
